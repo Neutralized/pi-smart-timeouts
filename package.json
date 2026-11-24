@@ -1,0 +1,44 @@
+{
+  "name": "pi-smart-timeouts",
+  "version": "0.1.0",
+  "description": "Pi bash tool that moves long commands to background jobs instead of killing them, and wakes the agent when a job exits",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neutralized/pi-smart-timeouts.git"
+  },
+  "homepage": "https://github.com/Neutralized/pi-smart-timeouts#readme",
+  "bugs": {
+    "url": "https://github.com/Neutralized/pi-smart-timeouts/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "pi-coding-agent",
+    "bash",
+    "timeout",
+    "background",
+    "jobs"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "test": "node --import ./test/register.mjs --test test/*.test.ts",
+    "smoke": "node test/smoke/run.mjs"
+  }
+}
